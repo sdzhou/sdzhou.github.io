@@ -7,15 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - Hello Dong</title>
+<title>创建hexo博客 - Hello Dong</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hello Dong">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="description" content="第二篇：hexo部署到GitHub上  首先我我们先进入我们的GitHub上，新建一个库。具体做法：进入GitHub网站，登入自己的账号，在右上角有个+号，点击它，下面有个选项 “new repository” 点击它，开始创建库。在“Repository name” 中填必修填写“你个GitHub的名字.github.io”例如我的是：https:&#x2F;&#x2F;sdzhou.github.io&#x2F; （我的G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="创建hexo博客">
+<meta property="og:url" content="http://yoursite.com/2020/03/01/hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/index.html">
 <meta property="og:site_name" content="Hello Dong">
+<meta property="og:description" content="第二篇：hexo部署到GitHub上  首先我我们先进入我们的GitHub上，新建一个库。具体做法：进入GitHub网站，登入自己的账号，在右上角有个+号，点击它，下面有个选项 “new repository” 点击它，开始创建库。在“Repository name” 中填必修填写“你个GitHub的名字.github.io”例如我的是：https:&#x2F;&#x2F;sdzhou.github.io&#x2F; （我的G">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="article:published_time" content="2020-03-01T04:52:13.000Z">
+<meta property="article:modified_time" content="2020-03-01T05:48:56.729Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -77,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Hello Dong" height="28">
+                <img src="/images/logo.png" alt="创建hexo博客" height="28">
             
             </a>
         </div>
@@ -91,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -127,34 +131,94 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-01T04:52:13.000Z">2020-03-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/blog%E5%88%9B%E5%BB%BA/">blog创建</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 530 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                创建hexo博客
+            
+        </h1>
+        <div class="content">
+            <h2 id="第二篇：hexo部署到GitHub上"><a href="#第二篇：hexo部署到GitHub上" class="headerlink" title="第二篇：hexo部署到GitHub上"></a>第二篇：hexo部署到GitHub上</h2><p>  首先我我们先进入我们的GitHub上，新建一个库。<br>具体做法：进入GitHub网站，登入自己的账号，在右上角有个+号，点击它，下面有个选项 “new repository” 点击它，开始创建库。<br>在“Repository name” 中填必修填写“你个GitHub的名字.github.io”<br>例如我的是：<a href="https://sdzhou.github.io/">https://sdzhou.github.io/</a> （我的GitHub名是：sdzhou。这个地址以后就是你的博客的网站，输入它就可以进入你的博客了。）<br>接下来我们点击下面的绿色按钮就可以创建了。</p>
+<a id="more"></a>
+<p>然后我们打开Git bash 这个软件（这个是在上一篇中下载的），进入我们的博客文件夹，我的是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> d:</span><br><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+<p>然后我们需要现在一个git的插件，在命令输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>安装完成之后我们在blog的目录下找到_config.yml文件并修改，可以用命令行，也可以直接去文件夹下修改。<br>命令行为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>我们到文件的最底层看到deploy： 在它下面加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">   type: git</span><br><span class="line">   repo: https:&#x2F;&#x2F;github.com&#x2F;sdzhou&#x2F;sdzhou.github.io.git  &#x2F;&#x2F;这是我们新建的那个仓库网址</span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
+<p>然后我们保存退出（两次esc键后shift ：wq）<br>然后我们开始部署到远端,在命令行输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p> 一会会提示你输入GitHub的账号和密码，等待一会就成功部署了。<br> 这样GitHub上的部署完成了，还是比较简单的吧。以后我们可以直接在浏览器中输入<a href="https://sdzhou.github.io/">https://sdzhou.github.io/</a> （之前我们创建的名字）这样我们就可以不用再本地端口访问了，一会写好一篇文章后，再命令行中输入 hexo d 就可以推送到远端了。<br> 推送的时候可能会有些延迟，多刷新下就可以了。</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/hexo/" rel="tag">hexo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/blog%E5%88%9B%E5%BB%BA/">
-            <span class="level-start">
-                <span class="level-item">blog创建</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/hexo/">
-            <span class="level-start">
-                <span class="level-item">hexo</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/blog/">
+                <span class="level-item">创建hexo博客</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -709,7 +773,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Hello Dong" height="28">
+                    <img src="/images/logo.png" alt="创建hexo博客" height="28">
                 
                 </a>
                 <p class="is-size-7">
